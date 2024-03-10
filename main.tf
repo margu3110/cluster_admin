@@ -34,17 +34,4 @@ module "ec2" {
   instance_profile = module.iam_instance_profile.instance_profile
 }
 
-output "PrivateIp_Instance" {
-    value = module.ec2.ec2_private_ip
-}
-
-output "PublicIp_Instance" {
-    value = module.ec2.ec2_public_ip
-}
-
 data "aws_caller_identity" "current" {}
-
-output "account_id" {
-    value = data.aws_caller_identity.current.account_id
-}
- 
