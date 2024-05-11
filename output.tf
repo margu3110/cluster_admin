@@ -9,3 +9,7 @@ output "PublicIp_Instance" {
 output "account_id" {
     value = data.aws_caller_identity.current.account_id
 }
+
+output "ssh session" {
+  value = "ssh -i ~/pem/elrond.pem ubuntu@${module.ec2.public_ip}"
+}

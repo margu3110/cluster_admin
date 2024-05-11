@@ -1,6 +1,6 @@
 provider "aws" {
     region = "us-east-1"
-    profile = "terraform-isildur"
+    profile = "terraform-elrond"
 }
 
 data "aws_vpc" "default_vpc" {
